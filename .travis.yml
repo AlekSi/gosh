@@ -15,6 +15,11 @@ env:
 
 go_import_path: gosh-lang.org/gosh
 
+before_install:
+  - if [ "$TRAVIS_OS_NAME" = "windows" ]; then
+      choco install -y mingw;
+    fi
+
 install:
   - make init
   - git checkout go.mod go.sum
