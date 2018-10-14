@@ -20,9 +20,10 @@ before_install:
       choco install -y mingw;
     fi
 
-  - ls -l C:\tools\mingw64\bin
+  - env
   - echo %PATH%
   - where make
+  - dir C:\tools\mingw64\bin
 
 install:
   - make init
