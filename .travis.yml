@@ -1,17 +1,17 @@
 language: go
 
 os:
-  - linux
-  - osx
+  # - linux
+  # - osx
   - windows
 
 go:
   - 1.11.x
-  - master
+  # - master
 
 env:
   - GO111MODULE=off
-  - GO111MODULE=on
+  # - GO111MODULE=on
 
 go_import_path: gosh-lang.org/gosh
 
@@ -19,6 +19,10 @@ before_install:
   - if [ "$TRAVIS_OS_NAME" = "windows" ]; then
       choco install -y mingw;
     fi
+
+  - ls -l C:\tools\mingw64\bin
+  - echo %PATH%
+  - where make
 
 install:
   - make init
@@ -33,7 +37,7 @@ script:
   - if [ "$GO111MODULE" = "on" ]; then
       go mod vendor -v;
     fi
-  - env GO111MODULE=off make check;
+  - env GO111MODULE=off make check
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -f cover.out -X fix -e GO111MODULE
