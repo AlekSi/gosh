@@ -1,13 +1,13 @@
 language: go
 
 os:
-  - linux
-  - osx
+  # - linux
+  # - osx
   - windows
 
 go:
   - 1.11.x
-  - master
+  # - master
 
 env:
   - GO111MODULE=off
