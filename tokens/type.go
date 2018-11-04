@@ -27,8 +27,8 @@ const (
 
 	Identifier Type = "IDENTIFIER"
 	Integer    Type = "INTEGER"
-	Float           = "FLOAT"
-	// Rune       = "RUNE"
+	Float      Type = "FLOAT"
+	// Rune       Type = "RUNE"
 	String Type = "STRING"
 
 	Assignment Type = "ASSIGNMENT" // =
