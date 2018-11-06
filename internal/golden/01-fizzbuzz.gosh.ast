@@ -113,19 +113,19 @@
             }),
             Value: (*ast.InfixExpression)({
               Token: (tokens.Token) {
-                Offset: (int) 73,
+                Offset: (int) 72,
                 Type: (tokens.Type) (len=5) "EQUAL",
                 Literal: (string) (len=2) "=="
               },
               Left: (*ast.InfixExpression)({
                 Token: (tokens.Token) {
-                  Offset: (int) 70,
+                  Offset: (int) 69,
                   Type: (tokens.Type) (len=9) "REMAINDER",
                   Literal: (string) (len=1) "%"
                 },
                 Left: (*ast.Identifier)({
                   Token: (tokens.Token) {
-                    Offset: (int) 69,
+                    Offset: (int) 68,
                     Type: (tokens.Type) (len=10) "IDENTIFIER",
                     Literal: (string) (len=1) "i"
                   },
@@ -133,7 +133,7 @@
                 }),
                 Right: (*ast.IntegerLiteral)({
                   Token: (tokens.Token) {
-                    Offset: (int) 71,
+                    Offset: (int) 70,
                     Type: (tokens.Type) (len=7) "INTEGER",
                     Literal: (string) (len=1) "3"
                   },
@@ -142,7 +142,7 @@
               }),
               Right: (*ast.IntegerLiteral)({
                 Token: (tokens.Token) {
-                  Offset: (int) 76,
+                  Offset: (int) 75,
                   Type: (tokens.Type) (len=7) "INTEGER",
                   Literal: (string) (len=1) "0"
                 },
@@ -152,13 +152,13 @@
           }),
           (*ast.VarStatement)({
             Token: (tokens.Token) {
-              Offset: (int) 80,
+              Offset: (int) 78,
               Type: (tokens.Type) (len=3) "VAR",
               Literal: (string) (len=3) "var"
             },
             Name: (*ast.Identifier)({
               Token: (tokens.Token) {
-                Offset: (int) 84,
+                Offset: (int) 82,
                 Type: (tokens.Type) (len=10) "IDENTIFIER",
                 Literal: (string) (len=2) "m5"
               },
@@ -166,19 +166,19 @@
             }),
             Value: (*ast.InfixExpression)({
               Token: (tokens.Token) {
-                Offset: (int) 94,
+                Offset: (int) 91,
                 Type: (tokens.Type) (len=5) "EQUAL",
                 Literal: (string) (len=2) "=="
               },
               Left: (*ast.InfixExpression)({
                 Token: (tokens.Token) {
-                  Offset: (int) 91,
+                  Offset: (int) 88,
                   Type: (tokens.Type) (len=9) "REMAINDER",
                   Literal: (string) (len=1) "%"
                 },
                 Left: (*ast.Identifier)({
                   Token: (tokens.Token) {
-                    Offset: (int) 90,
+                    Offset: (int) 87,
                     Type: (tokens.Type) (len=10) "IDENTIFIER",
                     Literal: (string) (len=1) "i"
                   },
@@ -186,7 +186,7 @@
                 }),
                 Right: (*ast.IntegerLiteral)({
                   Token: (tokens.Token) {
-                    Offset: (int) 92,
+                    Offset: (int) 89,
                     Type: (tokens.Type) (len=7) "INTEGER",
                     Literal: (string) (len=1) "5"
                   },
@@ -195,7 +195,7 @@
               }),
               Right: (*ast.IntegerLiteral)({
                 Token: (tokens.Token) {
-                  Offset: (int) 97,
+                  Offset: (int) 94,
                   Type: (tokens.Type) (len=7) "INTEGER",
                   Literal: (string) (len=1) "0"
                 },
@@ -205,19 +205,19 @@
           }),
           (*ast.IfStatement)({
             Token: (tokens.Token) {
-              Offset: (int) 102,
+              Offset: (int) 98,
               Type: (tokens.Type) (len=2) "IF",
               Literal: (string) (len=2) "if"
             },
             Cond: (*ast.InfixExpression)({
               Token: (tokens.Token) {
-                Offset: (int) 109,
+                Offset: (int) 105,
                 Type: (tokens.Type) (len=11) "LOGICAL_AND",
                 Literal: (string) (len=2) "&&"
               },
               Left: (*ast.Identifier)({
                 Token: (tokens.Token) {
-                  Offset: (int) 106,
+                  Offset: (int) 102,
                   Type: (tokens.Type) (len=10) "IDENTIFIER",
                   Literal: (string) (len=2) "m3"
                 },
@@ -225,7 +225,7 @@
               }),
               Right: (*ast.Identifier)({
                 Token: (tokens.Token) {
-                  Offset: (int) 112,
+                  Offset: (int) 108,
                   Type: (tokens.Type) (len=10) "IDENTIFIER",
                   Literal: (string) (len=2) "m5"
                 },
@@ -234,26 +234,26 @@
             }),
             Body: (*ast.BlockStatement)({
               Token: (tokens.Token) {
-                Offset: (int) 116,
+                Offset: (int) 112,
                 Type: (tokens.Type) (len=6) "LBRACE",
                 Literal: (string) (len=1) "{"
               },
               Statements: ([]ast.Statement) (len=2) {
                 (*ast.ExpressionStatement)({
                   Token: (tokens.Token) {
-                    Offset: (int) 120,
+                    Offset: (int) 116,
                     Type: (tokens.Type) (len=10) "IDENTIFIER",
                     Literal: (string) (len=7) "println"
                   },
                   Expression: (*ast.CallExpression)({
                     Token: (tokens.Token) {
-                      Offset: (int) 127,
+                      Offset: (int) 123,
                       Type: (tokens.Type) (len=6) "LPAREN",
                       Literal: (string) (len=1) "("
                     },
                     Function: (*ast.Identifier)({
                       Token: (tokens.Token) {
-                        Offset: (int) 120,
+                        Offset: (int) 116,
                         Type: (tokens.Type) (len=10) "IDENTIFIER",
                         Literal: (string) (len=7) "println"
                       },
@@ -262,7 +262,7 @@
                     Arguments: ([]ast.Expression) (len=1) {
                       (*ast.StringLiteral)({
                         Token: (tokens.Token) {
-                          Offset: (int) 128,
+                          Offset: (int) 124,
                           Type: (tokens.Type) (len=6) "STRING",
                           Literal: (string) (len=10) "\"FizzBuzz\""
                         },
@@ -273,7 +273,7 @@
                 }),
                 (*ast.ContinueStatement)({
                   Token: (tokens.Token) {
-                    Offset: (int) 142,
+                    Offset: (int) 138,
                     Type: (tokens.Type) (len=8) "CONTINUE",
                     Literal: (string) (len=8) "continue"
                   }
@@ -283,13 +283,13 @@
           }),
           (*ast.IfStatement)({
             Token: (tokens.Token) {
-              Offset: (int) 155,
+              Offset: (int) 151,
               Type: (tokens.Type) (len=2) "IF",
               Literal: (string) (len=2) "if"
             },
             Cond: (*ast.Identifier)({
               Token: (tokens.Token) {
-                Offset: (int) 159,
+                Offset: (int) 155,
                 Type: (tokens.Type) (len=10) "IDENTIFIER",
                 Literal: (string) (len=2) "m3"
               },
@@ -297,26 +297,26 @@
             }),
             Body: (*ast.BlockStatement)({
               Token: (tokens.Token) {
-                Offset: (int) 163,
+                Offset: (int) 159,
                 Type: (tokens.Type) (len=6) "LBRACE",
                 Literal: (string) (len=1) "{"
               },
               Statements: ([]ast.Statement) (len=2) {
                 (*ast.ExpressionStatement)({
                   Token: (tokens.Token) {
-                    Offset: (int) 167,
+                    Offset: (int) 163,
                     Type: (tokens.Type) (len=10) "IDENTIFIER",
                     Literal: (string) (len=7) "println"
                   },
                   Expression: (*ast.CallExpression)({
                     Token: (tokens.Token) {
-                      Offset: (int) 174,
+                      Offset: (int) 170,
                       Type: (tokens.Type) (len=6) "LPAREN",
                       Literal: (string) (len=1) "("
                     },
                     Function: (*ast.Identifier)({
                       Token: (tokens.Token) {
-                        Offset: (int) 167,
+                        Offset: (int) 163,
                         Type: (tokens.Type) (len=10) "IDENTIFIER",
                         Literal: (string) (len=7) "println"
                       },
@@ -325,7 +325,7 @@
                     Arguments: ([]ast.Expression) (len=1) {
                       (*ast.StringLiteral)({
                         Token: (tokens.Token) {
-                          Offset: (int) 175,
+                          Offset: (int) 171,
                           Type: (tokens.Type) (len=6) "STRING",
                           Literal: (string) (len=6) "\"Fizz\""
                         },
@@ -336,7 +336,7 @@
                 }),
                 (*ast.ContinueStatement)({
                   Token: (tokens.Token) {
-                    Offset: (int) 185,
+                    Offset: (int) 181,
                     Type: (tokens.Type) (len=8) "CONTINUE",
                     Literal: (string) (len=8) "continue"
                   }
@@ -346,13 +346,13 @@
           }),
           (*ast.IfStatement)({
             Token: (tokens.Token) {
-              Offset: (int) 198,
+              Offset: (int) 194,
               Type: (tokens.Type) (len=2) "IF",
               Literal: (string) (len=2) "if"
             },
             Cond: (*ast.Identifier)({
               Token: (tokens.Token) {
-                Offset: (int) 202,
+                Offset: (int) 198,
                 Type: (tokens.Type) (len=10) "IDENTIFIER",
                 Literal: (string) (len=2) "m5"
               },
@@ -360,26 +360,26 @@
             }),
             Body: (*ast.BlockStatement)({
               Token: (tokens.Token) {
-                Offset: (int) 206,
+                Offset: (int) 202,
                 Type: (tokens.Type) (len=6) "LBRACE",
                 Literal: (string) (len=1) "{"
               },
               Statements: ([]ast.Statement) (len=2) {
                 (*ast.ExpressionStatement)({
                   Token: (tokens.Token) {
-                    Offset: (int) 210,
+                    Offset: (int) 206,
                     Type: (tokens.Type) (len=10) "IDENTIFIER",
                     Literal: (string) (len=7) "println"
                   },
                   Expression: (*ast.CallExpression)({
                     Token: (tokens.Token) {
-                      Offset: (int) 217,
+                      Offset: (int) 213,
                       Type: (tokens.Type) (len=6) "LPAREN",
                       Literal: (string) (len=1) "("
                     },
                     Function: (*ast.Identifier)({
                       Token: (tokens.Token) {
-                        Offset: (int) 210,
+                        Offset: (int) 206,
                         Type: (tokens.Type) (len=10) "IDENTIFIER",
                         Literal: (string) (len=7) "println"
                       },
@@ -388,7 +388,7 @@
                     Arguments: ([]ast.Expression) (len=1) {
                       (*ast.StringLiteral)({
                         Token: (tokens.Token) {
-                          Offset: (int) 218,
+                          Offset: (int) 214,
                           Type: (tokens.Type) (len=6) "STRING",
                           Literal: (string) (len=6) "\"Buzz\""
                         },
@@ -399,7 +399,7 @@
                 }),
                 (*ast.ContinueStatement)({
                   Token: (tokens.Token) {
-                    Offset: (int) 228,
+                    Offset: (int) 224,
                     Type: (tokens.Type) (len=8) "CONTINUE",
                     Literal: (string) (len=8) "continue"
                   }
@@ -409,19 +409,19 @@
           }),
           (*ast.ExpressionStatement)({
             Token: (tokens.Token) {
-              Offset: (int) 241,
+              Offset: (int) 237,
               Type: (tokens.Type) (len=10) "IDENTIFIER",
               Literal: (string) (len=7) "println"
             },
             Expression: (*ast.CallExpression)({
               Token: (tokens.Token) {
-                Offset: (int) 248,
+                Offset: (int) 244,
                 Type: (tokens.Type) (len=6) "LPAREN",
                 Literal: (string) (len=1) "("
               },
               Function: (*ast.Identifier)({
                 Token: (tokens.Token) {
-                  Offset: (int) 241,
+                  Offset: (int) 237,
                   Type: (tokens.Type) (len=10) "IDENTIFIER",
                   Literal: (string) (len=7) "println"
                 },
@@ -430,7 +430,7 @@
               Arguments: ([]ast.Expression) (len=1) {
                 (*ast.Identifier)({
                   Token: (tokens.Token) {
-                    Offset: (int) 249,
+                    Offset: (int) 245,
                     Type: (tokens.Type) (len=10) "IDENTIFIER",
                     Literal: (string) (len=1) "i"
                   },
