@@ -37,7 +37,7 @@ func New(config *Config) *Interpreter {
 }
 
 func (i *Interpreter) crash(format string, a ...interface{}) {
-	msg := fmt.Sprintf(format, a...)
+	msg := fmt.Errorf(format, a...)
 	panic(msg)
 }
 

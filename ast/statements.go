@@ -161,6 +161,51 @@ func (fs *ForStatement) String() string {
 func (fs *ForStatement) node()      {}
 func (fs *ForStatement) statement() {}
 
+// A SwitchStatement represents an expression switch statement.
+type SwitchStatement struct {
+	Token tokens.Token // tokens.Switch
+	Cases []CaseClause
+}
+
+func (ss *SwitchStatement) String() string {
+	var res strings.Builder
+	res.WriteString("switch {\n")
+	for _, c := range ss.Cases {
+		res.WriteString(c.String())
+	}
+	res.WriteString("}")
+	return res.String()
+}
+
+func (ss *SwitchStatement) node()      {}
+func (ss *SwitchStatement) statement() {}
+
+// A CaseClause represents a case of an expression or type switch statement.
+type CaseClause struct {
+	List []Expression
+	Body []Statement
+}
+
+func (cc *CaseClause) String() string {
+	var res strings.Builder
+	res.WriteString("case ")
+	for i, e := range cc.List {
+		res.WriteString(e.String())
+		if i != len(cc.List)-1 {
+			res.WriteString(", ")
+		}
+	}
+	res.WriteString(":\n")
+	for _, s := range cc.Body {
+		res.WriteString(s.String())
+		res.WriteString(";\n")
+	}
+	return res.String()
+}
+
+func (cc *CaseClause) node()      {}
+func (cc *CaseClause) statement() {}
+
 // ExpressionStatement represents an expression when it is used as a statement.
 type ExpressionStatement struct {
 	Token      tokens.Token // first token of expression
