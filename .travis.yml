@@ -21,8 +21,6 @@ go_import_path: gosh-lang.org/gosh
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then choco install make; fi
-  - uname -a
-  - uname -s
 
 install:
   - make init
@@ -31,7 +29,7 @@ script:
   - gofmt -w -s .
   - make test
   - git diff --exit-code
-  - make check
+  # - make check
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -f cover.out -X fix -e GO111MODULE
