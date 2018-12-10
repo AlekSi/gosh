@@ -19,6 +19,9 @@ matrix:
 
 go_import_path: gosh-lang.org/gosh
 
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then choco install make; fi
+
 install:
   - make init
 
