@@ -83,12 +83,18 @@ func TestScanner(t *testing.T) {
 			{Offset: 3, Type: tokens.Integer, Literal: `042`},
 			{Offset: 6, Type: tokens.EOF},
 		},
-		`3.4 4.35 5. 1.42`: {
-			{Offset: 0, Type: tokens.Float, Literal: `3.4`},
-			{Offset: 4, Type: tokens.Float, Literal: `4.35`},
-			{Offset: 9, Type: tokens.Float, Literal: `5.`},
-			{Offset: 12, Type: tokens.Float, Literal: `1.42`},
-			{Offset: 16, Type: tokens.EOF},
+		`4.2 42.0 0.42`: {
+			{Offset: 0, Type: tokens.Float, Literal: `4.2`},
+			{Offset: 4, Type: tokens.Float, Literal: `42.0`},
+			{Offset: 9, Type: tokens.Float, Literal: `0.42`},
+			{Offset: 13, Type: tokens.EOF},
+		},
+		`42. .42`: {
+			{Offset: 0, Type: tokens.Integer, Literal: `42`},
+			{Offset: 2, Type: tokens.Period, Literal: `.`},
+			{Offset: 4, Type: tokens.Period, Literal: `.`},
+			{Offset: 5, Type: tokens.Integer, Literal: `42`},
+			{Offset: 7, Type: tokens.EOF},
 		},
 		// TODO Character, Rune, Byte?
 		`"Hello, world!"`: {

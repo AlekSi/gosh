@@ -103,9 +103,17 @@ func isDigit(r rune) bool {
 	return '0' <= r && r <= '9'
 }
 
+// crash panics with a given formatted message and some internal Scanner details.
 func (s *Scanner) crash(format string, a ...interface{}) {
 	msg := fmt.Sprintf(format, a...)
 	panic(fmt.Errorf("%s\nrPos: %d\nr: %q", msg, s.rPos, s.r))
+}
+
+// assert crashes the Scanner if condition is false.
+func (s *Scanner) assert(condition bool, format string, a ...interface{}) {
+	if !condition {
+		s.crash(format, a...)
+	}
 }
 
 func (s *Scanner) peekRune() rune {
@@ -150,6 +158,8 @@ func (s *Scanner) readLine() string {
 }
 
 func (s *Scanner) readInt() (string, bool) {
+	s.assert(isDigit(s.r), "current rune is not a digit")
+
 	pos := s.rPos
 	for isDigit(s.r) {
 		s.readRune()
@@ -427,18 +437,18 @@ func (s *Scanner) NextToken() tokens.Token {
 			}
 
 			if s.r == '.' {
-				// Consume '.' and see if we can parse a float
+				// consume '.' and see if we can parse a float
 				s.readRune()
-				tok.Type = tokens.Float
-
-				s.peekRune()
-
 				lit, ok = s.readInt()
+				if ok {
+
+				}
 				switch {
 				case ok:
-					tok.Literal = fmt.Sprintf("%v.%v", tok.Literal, lit)
+					tok.Literal = fmt.Sprintf("%s.%s", tok.Literal, lit)
+					tok.Type = tokens.Float
 				case len(lit) > 0:
-					tok.Literal = fmt.Sprintf("%v.%v", tok.Literal, lit)
+					tok.Literal = fmt.Sprintf("%s.%s", tok.Literal, lit)
 					tok.Type = tokens.Illegal
 				}
 			}

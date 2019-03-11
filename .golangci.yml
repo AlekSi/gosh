@@ -29,6 +29,10 @@ linters-settings:
 
 linters:
   enable-all: true
+  disable:
+    - scopelint         # too many false positives
+    - gochecknoglobals  # not all global variables are bad
+    - gochecknoinits    # nothing really wrong with init
 
 issues:
   exclude-use-default: false
